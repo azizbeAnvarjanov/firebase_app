@@ -39,7 +39,7 @@ export default function Home() {
                         component="div"
                         sx={{ color: "#fff" }}
                       >
-                        $500.00
+                        $5000.00
                       </Typography>
                       <Typography
                         gutterBottom

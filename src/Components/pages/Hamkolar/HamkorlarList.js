@@ -151,7 +151,7 @@ export default function UsersList() {
           </Box>
         </Modal>
       </div>
-      {rows.length > 0 && (
+      {rows?.length > 0 && (
         <Paper sx={{ width: "98%", overflow: "hidden", padding: "12px" }}>
           <Typography
             gutterBottom
@@ -205,8 +205,8 @@ export default function UsersList() {
               </TableHead>
               <TableBody>
                 {rows
-                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                  .map((row) => {
+                  ?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  ?.map((row) => {
                     return (
                       <TableRow
                         hover
