@@ -47,7 +47,7 @@ export default function Home() {
                         component="div"
                         sx={{ color: "#ccd1d1" }}
                       >
-                        Total Earnings
+                        Total Earnings azaaaaa
                       </Typography>
                     </CardContent>
                   </Card>
