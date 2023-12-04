@@ -1,5 +1,4 @@
 import React from 'react'
-import SideNav from './Components/SideNav'
 import Home from './Components/pages/Home'
 import Hamkorlar from './Components/pages/Hamkorlar'
 import Setting from './Components/pages/Setting'

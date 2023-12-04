@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -14,7 +13,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { usAppStore } from '../appStore';
 
 const drawerWidth = 240;
@@ -45,7 +44,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'flex-end',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
 
@@ -80,7 +78,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 export default function SideNav() {
   const theme = useTheme();
-  // const [open, setOpen] = React.useState(true);
   const navigate = useNavigate();
   const open = usAppStore((state) => state.dopen)
 
@@ -140,7 +137,7 @@ export default function SideNav() {
               </ListItemButton>
             </ListItem>
 
-            <ListItem disablePadding sx={{ display: 'block' }} onClick={() => navigate('/settings')}>
+            <ListItem disablePadding sx={{ display: 'block' }} >
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -157,7 +154,8 @@ export default function SideNav() {
                 >
                   <InboxIcon />
                 </ListItemIcon>
-                <ListItemText primary="Setting" sx={{ opacity: open ? 1 : 0 }} />
+                {/* <ListItemText primary="Setting" sx={{ opacity: open ? 1 : 0 }} /> */}
+                <Link to="/about">About</Link>
               </ListItemButton>
             </ListItem>
         </List>
